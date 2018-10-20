@@ -20,7 +20,7 @@ btn.addEventListener("click",function(){
 socket.on("chat",function(data){ // not sure why it plays twice but we'll figure that out 
     
 
-var msg = new SpeechSynthesisUtterance(data);
+var msg = new SpeechSynthesisUtterance(data.message);
 window.speechSynthesis.speak(msg);
 
 
@@ -31,7 +31,7 @@ var s = d.getUTCSeconds();
 var time = h.toString()+":"+m.toString()+":"+s.toString();
 console.log(time);
 
-output.innerHTML += "<p>" + data+ "<span align = 'right'>"  +time+ "</span>"+ "</p>" ;
+output.innerHTML += "<p>" + data.message+ "<span align = 'right'>"  +time+ "</span>"+ "</p>" ;
 
 });
 
