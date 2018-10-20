@@ -27,6 +27,7 @@ io.on("connection",function(socket){ // if connected
 
 
     socket.on("chat",function(data){
+        console.log(data);
         socket.broadcast.emit("chat", data); // all sockets connected
     });
 

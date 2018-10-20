@@ -1,4 +1,4 @@
-var socket = io.connect("172.17.38.161:5000"); 
+var socket = io.connect(); 
 
 
 var months = ["January","Feburary","March","April","May","June","July","Agust","September","October"

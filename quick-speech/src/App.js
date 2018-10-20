@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import './App.css'
-
-
+import './App.css';
+import openSocket from 'socket.io-client'
 
 import Keyboard from './keyboard.jsx'
 import TextZone from './textarea.jsx';
 import Menu from './menu.jsx';
-
 
 class App extends Component {
   constructor(props){
@@ -19,10 +17,15 @@ class App extends Component {
     this.changeKeyboard = this.changeKeyboard.bind(this);
     this.sayText = this.sayText.bind(this);
 
+
+
+
     this.state = {
       text: "",
       keyboard:"Custom Message"
     }
+
+    this.socket = openSocket("http://localhost:5000") 
 
     speechSynthesis.getVoices()
   }
@@ -54,6 +57,7 @@ class App extends Component {
 
   sayText(){
     var msg = new SpeechSynthesisUtterance(this.state.text);
+    this.socket.emit("chat",{message: this.state.text});
     msg.voice = speechSynthesis.getVoices()[3]
     window.speechSynthesis.speak(msg);
     this.setState({
