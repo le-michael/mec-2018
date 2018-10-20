@@ -1,0 +1,1 @@
+var socket = io.connect("172.17.38.161:5000"); 
