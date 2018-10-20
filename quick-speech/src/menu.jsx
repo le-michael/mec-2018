@@ -21,7 +21,7 @@ class Menu extends Component {
     constructor(props){
         super(props);
 
-        this.options = ["Custom Message","Phrases","Activities"]
+        this.options = ["Custom Message","Phrases","Activities","Names"]
 
     }
 

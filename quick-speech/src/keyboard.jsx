@@ -38,7 +38,12 @@ class CustomKeyboard extends Component {
                 </Paper>
                 <Paper onClick={()=>this.props.delText()} className="back"><Icon>DEL</Icon>
                 </Paper>
-                <Paper onClick={()=>this.props.sayText()} className="talk"><Icon>TALK</Icon></Paper>
+                
+                
+                
+
+                
+                
                 
             </div>
         );
@@ -49,7 +54,7 @@ class PhrasesKeyboard extends Component{
     constructor(props){
         super(props);
         this.greets = ["HELLO" ,"HOW ARE YOU", "I AM DOING WELL", "GOODBYE",
-                        "MY NAME IS DON", "HELLO BOB", "GOOD MORNING", "GOOD EVENING", "GOOD NIGHT",  "SEE YOU TOMORROW", "SLEEP WELL", "YES", "NO", "THANK YOU"]
+                        "MY NAME IS DON", "GOOD MORNING", "GOOD EVENING", "GOOD NIGHT",  "SEE YOU TOMORROW", "SLEEP WELL", "YES", "NO", "THANK YOU", "PLEASE"]
     }
 
 
@@ -61,7 +66,6 @@ class PhrasesKeyboard extends Component{
         return(
             <div className="keyboard">
                 {greetings}
-                <Paper onClick={()=>this.props.sayText()} className="talk"><Icon>TALK</Icon></Paper>
             </div>
         );
     }
@@ -70,7 +74,7 @@ class PhrasesKeyboard extends Component{
 class ActivityKeyboard extends Component {
     constructor(props){
         super(props);
-        this.activities = ["I WANT TO EAT","I WANT TO USE THE WASHROOM","I WANT TO SHOWER", "LET'S GO OUTSIDE", "I AM UNCOMFORTABLE"]
+        this.activities = ["I WANT TO EAT","I WANT TO USE THE WASHROOM","I WANT TO SHOWER", "LET'S GO OUTSIDE", "I AM UNCOMFORTABLE",]
     }
 
     render(){
@@ -80,8 +84,26 @@ class ActivityKeyboard extends Component {
         return(
             <div className="keyboard">
                 {activites}
-                <Paper onClick={()=>this.props.sayText()} className="talk"><Icon>TALK</Icon>
-                </Paper>
+            </div>
+
+        );
+    }
+}
+
+
+class NamesKeyboard extends Component {
+    constructor(props){
+        super(props);
+        this.names = ["BOB","MICHAEL","JIM","HENRY","JILL","MICHELLE","SHIRLEY","TROY","TRAVIS"]
+    }
+
+    render(){
+        const names = this.names.map((obj) => {
+            return <Key addText={() => this.props.addText(" "+obj)} type="message"> {obj}</Key>
+        });
+        return(
+            <div className="keyboard">
+                {names}
             </div>
 
         );
@@ -105,6 +127,7 @@ class Keyboard extends Component {
                         addText={this.props.addText} 
                         delText={this.props.delText}
                         sayText={this.props.sayText}
+                        clearText={this.props.clearText}
                         ></CustomKeyboard>;
 
             case "Phrases":
@@ -112,6 +135,7 @@ class Keyboard extends Component {
                 addText={this.props.addText} 
                 delText={this.props.delText}
                 sayText={this.props.sayText}
+                clearText={this.props.clearText}
                 ></PhrasesKeyboard>
 
             case "Activities":
@@ -119,7 +143,17 @@ class Keyboard extends Component {
                 addText={this.props.addText} 
                 delText={this.props.delText}
                 sayText={this.props.sayText}
+                clearText={this.props.clearText}
                 ></ActivityKeyboard>
+
+            case "Names":
+            return <NamesKeyboard                         
+                addText={this.props.addText} 
+                delText={this.props.delText}
+                sayText={this.props.sayText}
+                clearText={this.props.clearText}
+                ></NamesKeyboard>
+
             default:
                 return null;
         }
@@ -131,7 +165,10 @@ class Keyboard extends Component {
         return(
             <div>
                 {this.currentKeyboard()}
-                
+                <div className="keyboard">                
+                    <Paper onClick={()=>this.props.clearText()} className="talk"><Icon>CLEAR</Icon></Paper>
+                    <Paper onClick={()=>this.props.sayText()} className="talk"><Icon>TALK</Icon></Paper>
+                </div>
             </div>
         );
     }

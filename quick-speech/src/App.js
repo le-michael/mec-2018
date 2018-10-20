@@ -16,7 +16,7 @@ class App extends Component {
     this.getText = this.getText.bind(this);
     this.changeKeyboard = this.changeKeyboard.bind(this);
     this.sayText = this.sayText.bind(this);
-
+    this.clearText = this.clearText.bind(this);
 
 
 
@@ -60,8 +60,12 @@ class App extends Component {
     this.socket.emit("chat",{message: this.state.text});
     msg.voice = speechSynthesis.getVoices()[3]
     window.speechSynthesis.speak(msg);
+    this.clearText();
+  }
+
+  clearText() {
     this.setState({
-        text:""
+      text:""
     })
   }
 
@@ -86,7 +90,9 @@ class App extends Component {
         addText={this.addText}
         delText={this.delText}
         sayText={this.sayText}
+        clearText={this.clearText}
         selected={this.getKeyboard()}
+        
         >
         </Keyboard>
 
