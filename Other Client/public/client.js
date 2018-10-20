@@ -5,7 +5,7 @@ var months = ["January","Feburary","March","April","May","June","July","Agust","
 ,"November","December"];
 var btn = document.getElementById("send")
 var message = document.getElementById("message");
-
+/*
 btn.addEventListener("click",function(){
 
 
@@ -15,24 +15,31 @@ btn.addEventListener("click",function(){
     console.log("button press");
 });
 
-
+*/
 
 socket.on("chat",function(data){ // not sure why it plays twice but we'll figure that out 
     
 
-var msg = new SpeechSynthesisUtterance(data.message);
+var msg = new SpeechSynthesisUtterance(data);
 window.speechSynthesis.speak(msg);
 
-output.innerHTML += "<p>" + data.message+ "<span align = 'right'>"  +data.time+ "</span>"+ "</p>" ;
+
+var d = new Date();
+var h = d.getUTCHours() - 16;
+var m = d.getUTCMinutes();
+var s = d.getUTCSeconds(); 
+var time = h.toString()+":"+m.toString()+":"+s.toString();
+console.log(time);
+
+output.innerHTML += "<p>" + data+ "<span align = 'right'>"  +time+ "</span>"+ "</p>" ;
 
 });
 
 
 // FUNCTIONS FOR LE 
+/*
 function talk(text){ // takes in the string, outputs the text to speech 
     var d = new Date();
-    var day = d.getDate();
-    var month = d.getMonth();
     var h = d.getUTCHours() - 16;
     var m = d.getUTCMinutes();
     var s = d.getUTCSeconds(); 
@@ -53,5 +60,5 @@ function talk(text){ // takes in the string, outputs the text to speech
 }
 
 
-
+*/
 
