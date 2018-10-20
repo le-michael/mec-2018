@@ -1,4 +1,6 @@
 # quick-speech
+![demo](https://raw.githubusercontent.com/le-michael/mec-2018/master/screenshots/hellodon.png?token=AMcEjC7uuPuQQMqOiF3rNGQNS5bIeo1dks5b1OocwA%3D%3D)
+
 
 ## About this application
 
@@ -38,5 +40,4 @@ To build a keyboard go to the ```keyboard.jsx``` file and create a new keyboard 
 ### How to connect on other devices
 
 Find the ipv4 of the computer hosting the lobby service, and connect to the ipv4 at port ```5000```.
-
 
