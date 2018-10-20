@@ -23,7 +23,7 @@ socket.on("chat",function(data){ // not sure why it plays twice but we'll figure
 var msg = new SpeechSynthesisUtterance(data.message);
 window.speechSynthesis.speak(msg);
 
-output.innerHTML += "<p>" + data.message+ <>"</p>"  ;
+output.innerHTML += "<p>" + data.message+ "<span align = 'right'>"  +data.time+ "</span>"+ "</p>" ;
 
 });
 
