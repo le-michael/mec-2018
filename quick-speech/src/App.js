@@ -82,6 +82,7 @@ class App extends Component {
         addText={this.addText}
         delText={this.delText}
         sayText={this.sayText}
+        selected={this.getKeyboard()}
         >
         </Keyboard>
 
