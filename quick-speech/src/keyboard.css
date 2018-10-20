@@ -1,0 +1,33 @@
+.key {
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+    margin: 1%;
+}
+
+.space {
+    width: 480px;
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+    margin: 1%;
+}
+
+.back {
+    width: 220px;
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+    margin: 1%;
+}
+
+.keyboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75%;
+    
+    margin: auto;
+    margin-top: 25%;
+}

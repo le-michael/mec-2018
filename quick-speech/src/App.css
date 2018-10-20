@@ -1,0 +1,74 @@
+
+/* KEYBOARD CSS */
+.key {
+  width: 100px;
+  height: 70px;
+  text-align: center;
+  padding-top: 30px;
+  margin: 1%;
+}
+
+.space {
+  width: 480px;
+  height: 70px;
+  text-align: center;
+  padding-top: 30px;
+  margin: 1%;
+}
+
+.back {
+  width: 150px;
+  height: 70px;
+  text-align: center;
+  padding-top: 30px;
+  margin: 1%;
+}
+
+.keyboard{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  
+  margin: auto; 
+  
+}
+
+/* TEXTZONE CSS */
+
+.textzone{
+
+  padding-top: 20px;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 3%;
+  border-bottom: solid 1px silver;
+}
+
+/* MENU CSS */
+.menu{
+  
+  height: 100px;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin-bottom: 3%;
+}
+
+.menuitem{
+  margin: auto;
+  padding: 20px;
+  
+  
+}
+
+
+
+/* APP CSS */
+
+.app {
+  width: 75%;
+  margin: auto;
+}
