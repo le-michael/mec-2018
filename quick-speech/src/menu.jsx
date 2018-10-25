@@ -7,7 +7,7 @@ class MenuItem extends Component {
     render(){
         return(
             <div className="menuitem" onClick={()=>this.props.onClick()}>
-                    <Typography variant="h5" component="h3">
+                    <Typography variant="h4" component="h3">
                         {this.props.children}
                     </Typography>
             </div>
@@ -15,13 +15,11 @@ class MenuItem extends Component {
     }
 }
 
-
-
 class Menu extends Component {
     constructor(props){
         super(props);
 
-        this.options = ["Custom Message","Phrases","Activities","Names"]
+        this.options = ["Custom Message","Greetings", "Names", "Responses", "Activities"]
 
     }
 

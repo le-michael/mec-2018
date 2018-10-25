@@ -2,25 +2,26 @@
 /* KEYBOARD CSS */
 .key {
   width: 100px;
-  height: 70px;
+  height: 80px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
+
   margin: 1%;
 }
 
 .space {
   width: 480px;
-  height: 70px;
+  height: 80px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
   margin: 1%;
 }
 
 .back {
   width: 150px;
-  height: 70px;
+  height: 80px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
   margin: 1%;
 }
 
@@ -42,7 +43,7 @@
   height: 30px;
   text-align: center;
   padding:20px;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
   margin: 1%;
 }
 
@@ -87,8 +88,8 @@
 
 .talk {
   width: 48%;
-  height: 70px;
+  height: 80px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
   margin: 1%;
 }
