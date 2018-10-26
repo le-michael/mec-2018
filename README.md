@@ -29,13 +29,13 @@ The purpose of this application is to provide an intuitive way for Don to commun
 ## How to run the logging server
 1. Make sure that nodejs is installed and navigate to the ```Other Client``` folder.
 2. Run the command ```npm install``` to download all required dependencies.
-3. Run the command ```node server.js``` to launch the server.
+3. Find the IPv4 adress of the computer that is running the server.
+4. Navigate to the ```public``` folder in the ```Other Client``` folder and edit the ```client.js``` file.
+5. Change the first line: ```var socket = io.connect('http://localhost:5000');```  Replace ```localhost``` with your IPv4 adress that was found. The result should look like: ```var socket = io.connect('http://000.000.0.0:5000'); ``` Where the ```000.000.0.0``` is your IPv4 adress. Save and close the ```client.js``` file.
+6. Run the command ```node server.js``` to launch the server.
 
 ### How to connect with other devices
-1. Find the IPv4 adress of the computer that is running the server.
-2. Navigate to the ```public``` folder in the ```Other Client``` folder and edit the ```client.js``` file.
-3. Change the first line: ```var socket = io.connect('http://localhost:5000');```  Replace ```localhost``` with your IPv4 adress found. The result should look like: ```var socket = io.connect('http://000.000.0.0:5000'); ``` Where the ```000.000.0.0``` is your IPv4
-4. From the other device, connect to the IP adress at port ```5000```. You can do this by going to any webrowser and typing in: ```000.000.0.0:5000``` where the   ```0```'s are your IPv4 adress.
+From the other device, connect to the IP adress at port ```5000```. You can do this by going to any webrowser and typing in: ```000.000.0.0:5000``` where the   ```0```'s are your IPv4 adress.
 
 Note: These steps are only needed for the logging service, and is not nessassary for the text to speech application to work properly.
 
