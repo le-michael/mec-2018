@@ -28,10 +28,12 @@ io.on("connection",function(socket){ // if connected
             time: getTime(),
             date : getDayMonth()
         };
-        console.log(clientMessage);
-        socket.broadcast.emit("clientchat", clientMessage); // all sockets connected clientchat sends to the client side 
-        var text = clientMessage.date + " At "+clientMessage.time + " - " + clientMessage.message;
-        writeToFile(text);
+        if(clientMessage.message !="" ){
+            console.log(clientMessage);
+            socket.broadcast.emit("clientchat", clientMessage); // all sockets connected clientchat sends to the client side 
+            var text = clientMessage.date + " At "+clientMessage.time + " - " + clientMessage.message;
+            writeToFile(text);
+        }
     });
 });
 
@@ -49,8 +51,8 @@ function getDayMonth(){ // gets the date that the message was sent
 }
 
 function writeToFile(text){ // writes a string to the file in the system
-    text  = text +'\r\n';
-    fs.appendFile('./chatlog.txt',text);
+        text  = text +'\r\n';
+        fs.appendFile('./chatlog.txt',text);
 }
 
 function loadFile(){ // loads the file and returs a string with the <p> tags included. 

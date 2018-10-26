@@ -12,6 +12,6 @@ socket.on("clientchat",function(data){
     var msg = new SpeechSynthesisUtterance(data.message);
     window.speechSynthesis.speak(msg);
 
-    output.innerHTML += "<p>" + data.date + " At " + data.time+ " - "+"<span align = 'right'>"  +data.message+ "</span>"+ "</p>" ; //  adds message to the current HTML 
+    output.innerHTML += "<p>" + data.date + " At " + data.time+ " - "+data.message+"</p>" ; //  adds message to the current HTML 
 
 });

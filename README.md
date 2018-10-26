@@ -41,3 +41,7 @@ To build a keyboard go to the ```keyboard.jsx``` file and create a new keyboard 
 
 Find the ipv4 of the computer hosting the lobby service, and connect to the ipv4 at port ```5000```.
 
+
+## How to install the application
+1. Click "Clone or download" and click "Download Zip"
+![demo](https://raw.githubusercontent.com/le-michael/mec-2018/master/screenshots/download_as_zip.png?token=AMcEjC7uuPuQQMqOiF3rNGQNS5bIeo1dks5b1OocwA%3D%3D)
