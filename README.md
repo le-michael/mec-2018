@@ -42,6 +42,25 @@ To build a keyboard go to the ```keyboard.jsx``` file and create a new keyboard 
 Find the ipv4 of the computer hosting the lobby service, and connect to the ipv4 at port ```5000```.
 
 
-## How to install the application
-1. Click "Clone or download" and click "Download Zip"
-![demo](https://raw.githubusercontent.com/le-michael/mec-2018/master/screenshots/download_as_zip.png?token=AMcEjC7uuPuQQMqOiF3rNGQNS5bIeo1dks5b1OocwA%3D%3D)
+### How to install the application
+1. Click ```Clone or download``` and click ```Download Zip```
+![download as zip](https://raw.githubusercontent.com/le-michael/mec-2018/master/screenshots/download_as_zip.png?token=AMcEjC7uuPuQQMqOiF3rNGQNS5bIeo1dks5b1OocwA%3D%3D)
+2. Once the download is complete extract the package.
+
+## How to install Node.js
+1. Go to this link: https://nodejs.org/en/ and install the ```LTS``` version. 
+2. Follow the instructions provided by the installer wizard.
+
+### How to run the application
+1. Using the terminal navigate to the ```quick-speech``` folder.
+2. Run the command ```npm install``` to download all required dependencies.
+3. Run the command ```npm start``` to launch the application.
+
+### How to run the logging server
+1. Make sure that nodejs is installed and navigate to the ```Other Client``` folder.
+2. Run the command ```npm install``` to download all required dependencies.
+3. Run the command ```node server.js``` to launch the server.
+
+## How to connect with other devices
+1. Find the IPv4 adress of the computer that is running the server.
+2. From the other device, connect to the IP adress at port ```5000```. You can do this by going to any webrowser and typing in: ```000.000.0.0:5000``` where the   ```0```'s are your IPv4 adress.
